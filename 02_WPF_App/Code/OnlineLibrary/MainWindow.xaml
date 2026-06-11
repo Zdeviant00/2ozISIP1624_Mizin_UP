@@ -1,0 +1,89 @@
+﻿<Window x:Class="OnlineLibrary.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Онлайн библиотека" 
+        Height="700" 
+        Width="1200"
+        WindowStartupLocation="CenterScreen"
+        Style="{StaticResource MainWindowStyle}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Sidebar -->
+        <Border Grid.Column="0" 
+                Background="{StaticResource SurfaceBrush}"
+                BorderBrush="{StaticResource AccentBrush}"
+                BorderThickness="0,0,1,0">
+            <StackPanel VerticalAlignment="Top" 
+                        Margin="0,20,0,0">
+
+                <!-- Каталог книг -->
+                <Button x:Name="CatalogButton" 
+                        Style="{StaticResource SidebarButton}"
+                        ToolTip="Каталог книг"
+                        Click="CatalogButton_Click">
+                    <TextBlock Text="📚" FontSize="24"/>
+                </Button>
+
+                <!-- Списки книг -->
+                <Button x:Name="ListsButton" 
+                        Style="{StaticResource SidebarButton}"
+                        ToolTip="Списки книг"
+                        Click="ListsButton_Click">
+                    <TextBlock Text="📋" FontSize="24"/>
+                </Button>
+
+                <!-- Профиль -->
+                <Button x:Name="ProfileButton" 
+                        Style="{StaticResource SidebarButton}"
+                        ToolTip="Профиль"
+                        Click="ProfileButton_Click">
+                    <TextBlock Text="👤" FontSize="24"/>
+                </Button>
+
+                <!-- Администрирование (только для администраторов) -->
+                <Button x:Name="AdminButton" 
+                        Style="{StaticResource SidebarButton}"
+                        ToolTip="Администрирование"
+                        Visibility="Collapsed"
+                        Click="AdminButton_Click">
+                    <TextBlock Text="⚙️" FontSize="24"/>
+                </Button>
+
+                <!-- Предупреждение о заморозке (только для замороженных аккаунтов) -->
+                <Button x:Name="FrozenWarningButton" 
+                        Style="{StaticResource SidebarButton}"
+                        ToolTip="Ваш аккаунт заморожен. Нажмите для подробностей"
+                        Visibility="Collapsed"
+                        Click="FrozenWarningButton_Click">
+                    <TextBlock Text="⚠️" FontSize="24" Foreground="#FFFF4444"/>
+                </Button>
+
+                <!-- Разделитель -->
+                <Border Height="1" 
+                        Background="{StaticResource AccentBrush}"
+                        Margin="0,20,0,10"
+                        Opacity="0.3"/>
+
+                <!-- Кнопка Выйти -->
+                <Button x:Name="LogoutButton" 
+                        Style="{StaticResource SidebarButton}"
+                        ToolTip="Выйти"
+                        Click="LogoutButton_Click"
+                        VerticalAlignment="Bottom"
+                        Margin="0,10,0,0">
+                    <TextBlock Text="🚪" FontSize="24"/>
+                </Button>
+            </StackPanel>
+        </Border>
+
+        <!-- Основная область -->
+        <Frame x:Name="MainFrame" 
+               Grid.Column="1" 
+               NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>

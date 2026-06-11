@@ -1,0 +1,66 @@
+﻿<Page x:Class="OnlineLibrary.RegistrationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Регистрация">
+
+    <Grid Background="{StaticResource WindowBackgroundBrush}">
+        <StackPanel VerticalAlignment="Center" 
+                    HorizontalAlignment="Center"
+                    Width="400">
+
+            <TextBlock Text="Регистрация" 
+                       Style="{StaticResource TitleTextBlock}"
+                       HorizontalAlignment="Center"/>
+
+            <TextBlock Text="Создайте новый аккаунт" 
+                       Style="{StaticResource SubtitleTextBlock}"
+                       HorizontalAlignment="Center"/>
+
+            <TextBlock Text="Имя" 
+                       Foreground="{StaticResource TextSecondaryBrush}"
+                       Margin="0,0,0,5"/>
+            <TextBox x:Name="NameTextBox" 
+                     Style="{StaticResource InputTextBox}"/>
+
+            <TextBlock Text="Логин" 
+                       Foreground="{StaticResource TextSecondaryBrush}"
+                       Margin="0,0,0,5"/>
+            <TextBox x:Name="LoginTextBox" 
+                     Style="{StaticResource InputTextBox}"/>
+
+            <TextBlock Text="Email" 
+                       Foreground="{StaticResource TextSecondaryBrush}"
+                       Margin="0,0,0,5"/>
+            <TextBox x:Name="EmailTextBox" 
+                     Style="{StaticResource InputTextBox}"/>
+
+            <TextBlock Text="Пароль" 
+                       Foreground="{StaticResource TextSecondaryBrush}"
+                       Margin="0,0,0,5"/>
+            <PasswordBox x:Name="PasswordBox" 
+                         Style="{StaticResource InputPasswordBox}"/>
+
+            <Button x:Name="RegisterButton" 
+                    Content="Зарегистрироваться" 
+                    Style="{StaticResource AccentButton}"
+                    Click="RegisterButton_Click"/>
+
+            <TextBlock HorizontalAlignment="Center" 
+                       Margin="0,20,0,0">
+                <Run Text="Уже есть аккаунт? " Foreground="{StaticResource TextSecondaryBrush}"/>
+                <Hyperlink x:Name="LoginLink" 
+                           Foreground="{StaticResource AccentBrush}"
+                           Click="LoginLink_Click">
+                    Войти
+                </Hyperlink>
+            </TextBlock>
+
+            <TextBlock x:Name="ErrorTextBlock" 
+                       Text="" 
+                       Foreground="Red" 
+                       HorizontalAlignment="Center" 
+                       Margin="0,20,0,0"
+                       Visibility="Collapsed"/>
+        </StackPanel>
+    </Grid>
+</Page>

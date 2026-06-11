@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6732752fce8740748d8558d5d588be01" Name="Diagram1">
+        <EntityTypeShape EntityType="OnlineLibrary.BookLists" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineLibrary.Books" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineLibrary.Complaints" Width="1.5" PointX="5.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineLibrary.FreezeRequests" Width="1.5" PointX="5.25" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineLibrary.Genres" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineLibrary.Reviews" Width="1.5" PointX="8.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineLibrary.Roles" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineLibrary.Users" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <AssociationConnector Association="OnlineLibrary.FK__BookLists__UserI__656C112C" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineLibrary.FK__Reviews__BookId__5BE2A6F2" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineLibrary.FK__Complaint__UserI__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineLibrary.FK__FreezeReq__UserI__6C190EBB" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineLibrary.FK__Reviews__UserId__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineLibrary.FK__Users__RoleId__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineLibrary.BookGenres" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineLibrary.BookListItems" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
